@@ -1,0 +1,192 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&family=Parisienne&display=swap');
+
+/* General Styles */
+body {
+  font-family: 'Nunito', sans-serif;
+  background: linear-gradient(135deg, #5fdcea, #7a9896);
+  color: #333;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Profile Container */
+.profile-container {
+  max-width: 600px; /* Increased max-width */
+  padding: 80px;    /* Increased padding */
+  border-radius: 15px;
+  background: linear-gradient(135deg, #cc900f, #d2ceab);
+  box-shadow: 0px 6px 25px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+}
+
+
+.profile-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 35px rgba(0, 0, 0, 0.2);
+}
+
+/* Header */
+h2 {
+  font-family: 'Parisienne', cursive;
+  font-size: 30px;
+  color: #4A00E0;
+  margin-bottom: 20px;
+}
+
+/* Success & Error Messages */
+.error-message,
+.success-message {
+  margin-bottom: 15px;
+  padding: 12px;
+  font-size: 16px;
+  color: #fff;
+  border-radius: 8px;
+  transition: opacity 0.5s ease;
+}
+
+.error-message {
+  background: #e74c3c;
+}
+
+.success-message {
+  background: #2ecc71;
+}
+
+/* Profile Form */
+.profile-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Profile Picture */
+.profile-picture-container {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.profile-picture-preview {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #ddd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-picture-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Input Fields */
+.input-group {
+  width: 100%;
+  text-align: left;
+}
+
+.input-group label {
+  font-size: 16px;
+  color: #444;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+  background: #f8f8f8;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input-group input:focus {
+  border-color: #8E2DE2;
+  box-shadow: 0px 0px 8px rgba(142, 45, 226, 0.3);
+  background: #fff;
+  outline: none;
+}
+
+/* Buttons */
+button {
+  padding: 14px;
+  font-size: 16px;
+  font-weight: 600;
+  background: linear-gradient(135deg, #8E2DE2, #4A00E0);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #4A00E0, #8E2DE2);
+  transform: scale(1.05);
+}
+
+button:disabled {
+  background: #bbb;
+  cursor: not-allowed;
+}
+
+/* File Input */
+input[type="file"] {
+  display: none;
+}
+
+input[type="file"] + label {
+  display: inline-block;
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #2ecc71, #27ae60);
+  color: white;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+input[type="file"]:hover + label {
+  background: linear-gradient(135deg, #27ae60, #2ecc71);
+}
+
+/* Links */
+.login-link,
+.signup-link {
+  font-size: 16px;
+  color: #4A00E0;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.login-link:hover,
+.signup-link:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .profile-container {
+    padding: 30px;
+    width: 90%;
+  }
+  
+  h2 {
+    font-size: 26px;
+  }
+}
