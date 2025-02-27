@@ -23,10 +23,13 @@ function Login() {
       const response = await loginUser(formData); // Call API function
       alert("Login successful! Redirecting to dashboard...");
       
-      console.log(response.data.user.id)
+      console.log(response.data)
       // Store token in localStorage (optional)
       localStorage.setItem("token", response.token);
+      localStorage.setItem("userName", response.data.user.name); // Store user name in localStorage
       localStorage.setItem("userId", response.data.user.id); // Store user ID in localStorage
+      localStorage.setItem("photo", response.data.user.profile_photo); // Store user email in localStorage
+      localStorage.setItem("roleID",response.data.user.roleId)
 
 
       navigate("/dashboard"); // Redirect to dashboard

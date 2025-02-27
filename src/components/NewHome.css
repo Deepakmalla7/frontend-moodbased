@@ -1,0 +1,250 @@
+Reset and base styles
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  }
+  /* Layout */
+  .app-container {
+    display: flex;
+    height: 100vh;
+    background-color: #0f1219;
+    color: #cbd5e1;
+  }
+  /* Sidebar styles */
+  .sidebar {
+    width: 256px;
+    height: 100%;
+    background-color: #1a1f2e;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+  }
+  .sidebar-title {
+    margin-bottom: 32px;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: white;
+  }
+  .nav-section {
+    margin-bottom: 24px;
+  }
+  .nav-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 0;
+    cursor: pointer;
+    color: #cbd5e1;
+  }
+  .nav-item:hover {
+    color: white;
+  }
+  .section-title {
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    margin-bottom: 16px;
+    color: #cbd5e1;
+  }
+  .divider {
+    border-top: 1px solid #374151;
+    margin: 24px 0;
+  }
+  /* Main content */
+  .main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  /* Header styles */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px;
+  }
+  .search-container {
+    position: relative;
+    width: 384px;
+  }
+  .search-input {
+    width: 100%;
+    background-color: #272d3f;
+    color: white;
+    border: none;
+    border-radius: 9999px;
+    padding: 8px 16px 8px 40px;
+  }
+  .search-input:focus {
+    outline: none;
+  }
+  .search-icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #9ca3af;
+  }
+  .user-profile {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .avatar {
+    width: 32px;
+    height: 32px;
+    background-color: #4b5563;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+  }
+  /* Content area */
+  .content {
+    flex: 1;
+    padding: 24px;
+    overflow: auto;
+  }
+  .hero-title {
+    font-size: 3rem;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 24px;
+  }
+  .hero-text {
+    color: #9ca3af;
+    margin-bottom: 32px;
+  }
+  .play-button {
+    background-color: #2dd4bf;
+    color: black;
+    padding: 8px 32px;
+    border-radius: 9999px;
+    border: none;
+    cursor: pointer;
+  }
+  .play-button:hover {
+    background-color: #5eead4;
+  }
+  /* New releases section */
+  .releases-section {
+    margin-top: 48px;
+  }
+  .releases-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 24px;
+  }
+  .releases-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 24px;
+  }
+  .release-card {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .release-image {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 4px;
+  }
+  .release-title {
+    color: white;
+  }
+  .release-subtitle {
+    font-size: 0.875rem;
+    color: #9ca3af;
+  }
+  /* Now playing bar */
+  .now-playing {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #1a1f2e;
+    border-top: 1px solid #374151;
+    padding: 16px;
+  }
+  .player-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .track-info {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .track-image {
+    width: 48px;
+    height: 48px;
+    border-radius: 4px;
+  }
+  .track-details h3 {
+    color: white;
+  }
+  .track-details p {
+    font-size: 0.875rem;
+    color: #9ca3af;
+  }
+  .player-controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .control-buttons {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 8px;
+  }
+  .play-control {
+    width: 32px;
+    height: 32px;
+    background-color: #2dd4bf;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  .play-control:hover {
+    background-color: #5eead4;
+  }
+  .progress-bar {
+    width: 384px;
+    height: 4px;
+    background-color: #4b5563;
+    border-radius: 9999px;
+  }
+  .progress {
+    width: 33%;
+    height: 100%;
+    background-color: #2dd4bf;
+    border-radius: 9999px;
+  }
+  .volume-controls {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .volume-bar {
+    width: 96px;
+    height: 4px;
+    background-color: #4b5563;
+    border-radius: 9999px;
+  }
+  .volume-level {
+    width: 66%;
+    height: 100%;
+    background-color: #2dd4bf;
+    border-radius: 9999px;
+  }

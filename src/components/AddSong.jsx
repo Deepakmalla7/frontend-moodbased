@@ -19,12 +19,20 @@ const SongList = () => {
   const moods = ["Happy", "Sad", "Energetic", "Relaxed", "Romantic", "Neutral"];
   // Fetch songs from the backend
   useEffect(() => {
-    fetch("http://localhost:5000/api/songs")
-      .then((response) => response.json())
-      .then((data) => setSongs(data))
-      .catch((error) => console.error("Error fetching songs:", error));
+    const fetchSongs = async () => {
+      try {
+        const response = await fetch("http://localhost:5000/api/songs");
+        const data = await response.json();
+        console.log("Songs fetched:", data);
+        setSongs(data);
+      } catch (error) {
+        console.error("Error fetching songs:", error);
+      }
+    };
+  
+    fetchSongs();
   }, []);
-
+  
   // Handle song deletion
   const handleDelete = async (id) => {
     if (!window.confirm("Are you sure you want to delete this song?")) return;
@@ -125,10 +133,13 @@ const SongList = () => {
 
   return (
     <div className="Song-container">
+      <div className="songpage-header">
       <h3>Uploaded Songs</h3>
       <button onClick={() => openModal()} className="add-btn">Add Song</button>
 
-      <table>
+</div>
+      
+      <table className="song-table">
         <thead>
           <tr>
             <th>ID</th>

@@ -25,15 +25,26 @@
   color: #333;
   font-weight: 600;
 }
-
+.songpage-header {
+  /* display: flex;
+  justify-content: center; */
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+  font-weight: 600;
+}
 /* Add Song Button */
 .add-song-btn {
   display: flex;
+  max-height: 10px;
+  margin-left: 100px;
   align-items: center;
   justify-content: center;
   background: linear-gradient(135deg, #28a745, #218838);
   color: white;
-  padding: 12px 18px;
+  /* padding: 12px 18px; */
+  /* width: 100px; */
   border: none;
   cursor: pointer;
   border-radius: 8px;
@@ -49,11 +60,12 @@
 
 /* Table Styling */
 .song-table {
-  width: 100%;
+  margin-left: 100px;
+  width: calc(100% - 250px);
   border-collapse: collapse;
   background: white;
   border-radius: 12px;
-  overflow: hidden;
+  /* overflow: hidden; */
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 

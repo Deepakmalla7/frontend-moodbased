@@ -4,7 +4,7 @@
     height: 780px;
     width: 1600px;
     background: linear-gradient(135deg, #1e1e2f, #2a2a40);
-    color: white;
+    /* color: white; */
     font-family: 'Arial', sans-serif;
     background-image: url('body.png');
 }
@@ -45,7 +45,7 @@
 
 .sidebar nav ul li a {
     text-decoration: none;
-    color: rgb(17, 18, 17);
+    /* color: rgb(17, 18, 17); */
     display: flex;
     align-items: center;
     font-size: 20px;
@@ -240,5 +240,9 @@ audio {
 }
 
 body{
-    /* background-image: url(body.png); */
+    background: linear-gradient(to right, #7dc8e8 20%, #b87f97 60%, #8c8e8e 100%) ;
+
+    
 }
+
+
